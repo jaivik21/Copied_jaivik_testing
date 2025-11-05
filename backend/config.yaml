@@ -1,0 +1,32 @@
+# Provider configs (STT/LLM/TTS)
+
+stt:
+  provider: deepgram
+  api_key: ${DEEPGRAM_API_KEY}
+
+llm:
+  provider: azure
+  api_key: ${AZURE_OPENAI_API_KEY}
+<<<<<<< HEAD
+  azure_endpoint: ${AZURE_OPENAI_ENDPOINT}
+  api_version: ${AZURE_OPENAI_API_VERSION}
+  # deployment is the Azure deployment name (maps to a base model)
+  deployment: ${AZURE_OPENAI_CHAT_DEPLOYMENT}
+
+=======
+  model: gpt-4o-mini
+  azure_endpoint: ${AZURE_OPENAI_ENDPOINT}
+  api_version: ${AZURE_GPT_4O_MINI_API_VERSION}
+  deployment: ${AZURE_GPT_4O_MINI_DEPLOYMENT} 
+  
+>>>>>>> testing
+tts:
+  provider: elevenlabs
+  api_key: ${ELEVENLABS_API_KEY}
+  voice_id: ${ELEVENLABS_VOICE_ID}
+
+interview:
+  default_question_mode: "predefined"  # Switch this to "dynamic"
+  predefined_questions: 5
+  dynamic_max_questions: 10
+  context_summarization: true
